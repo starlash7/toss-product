@@ -1,16 +1,16 @@
-# Project Rules
+# 프로젝트 규칙
 
-## Execution
-- Run `build` or `lint` only when creating an ait file or preparing for release.
-- Do not add unnecessary copy, duplicate messages, or explanatory filler.
-- Do not change copy or wording arbitrarily.
+## 실행
+- `build` 또는 `lint`는 ait 파일을 만들거나 출시 준비를 할 때만 실행한다.
+- 불필요한 문구, 중복 멘트, 설명용 군더더기를 넣지 않는다.
+- 문구를 임의로 바꾸지 않는다.
 
-## Engineering
-- Follow Karpathy Guidelines as project rules:
-  - Think before coding.
-  - Prefer the simplest solution that works.
-  - Make surgical changes only.
-  - Define verifiable success criteria before claiming completion.
+## 엔지니어링
+- 카파시 가이드라인을 프로젝트 규칙으로 따른다:
+  - 코딩하기 전에 먼저 생각한다.
+  - 작동하는 가장 단순한 해결책을 우선한다.
+  - 필요한 부분만 정확히 수정한다.
+  - 완료를 말하기 전에 검증 가능한 성공 기준을 정한다.
 
-## Product Direction
-- For Toss challenge direction, follow `toss.md`.
+## 제품 방향
+- 토스 챌린지 방향성은 `toss.md`를 따른다.

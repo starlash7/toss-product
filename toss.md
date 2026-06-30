@@ -1,23 +1,23 @@
-# Toss Challenge Direction
+# 토스 챌린지 방향성
 
-## Core Principle
-- Toss wants simplicity.
-- Simplicity means reducing the user's decision burden, not just making the UI look minimal.
-- Focus on the screens the user actually uses.
+## 핵심 원칙
+- 토스가 원하는 것은 단순함이다.
+- 단순함은 UI를 미니멀하게 보이게 하는 것이 아니라, 사용자의 결정 부담을 줄이는 것이다.
+- 사용자가 실제로 쓰는 화면에 집중한다.
 
-## Product Focus
-- The challenge is about defining the user's problem and solving the core flow.
-- Do not expand into unrelated branding, full app concepts, or decorative flows.
-- Do not improve only visual style.
-- Show how the user completes the scheduling task from input to decision.
+## 제품 초점
+- 이 챌린지는 사용자의 문제를 정의하고 핵심 흐름을 해결하는 과제다.
+- 관련 없는 브랜딩, 전체 앱 컨셉, 장식적인 흐름으로 확장하지 않는다.
+- 시각 스타일만 개선하지 않는다.
+- 사용자가 입력부터 결정까지 일정 조율을 끝내는 흐름을 보여준다.
 
-## Scheduling Problem
-- The core problem is not that people have no available time.
-- The core problem is that users must compare constraints, preferences, and attendance importance across 6 people.
-- The product should move that calculation from the user to the system.
+## 일정 조율 문제
+- 핵심 문제는 사람들이 가능한 시간이 없다는 것이 아니다.
+- 핵심 문제는 사용자가 6명의 제약, 선호, 참석 중요도를 비교해야 한다는 것이다.
+- 제품은 그 계산을 사용자에게서 시스템으로 옮겨야 한다.
 
-## Solution Direction
-- Keep input simple.
-- Let the system calculate the best time.
-- Show one best recommendation first.
-- Explain the reason briefly enough for the user to trust the decision.
+## 해결 방향
+- 입력은 단순하게 유지한다.
+- 가장 좋은 시간은 시스템이 계산한다.
+- 가장 좋은 추천 1개를 먼저 보여준다.
+- 사용자가 결정을 신뢰할 수 있을 만큼만 이유를 짧게 설명한다.
