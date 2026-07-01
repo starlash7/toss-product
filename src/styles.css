@@ -1,0 +1,395 @@
+:root {
+  color-scheme: light;
+  --background: #f5f7fb;
+  --surface: #ffffff;
+  --surface-strong: #eef5ff;
+  --text: #191f28;
+  --muted: #6b7684;
+  --border: #dfe5ee;
+  --primary: #0064ff;
+  --primary-pressed: #0050cc;
+  --success: #0b8f5a;
+  --success-bg: #e7f7ef;
+  --warning: #b86b00;
+  --warning-bg: #fff3df;
+  --danger: #d12b2b;
+  --danger-bg: #ffeded;
+  --shadow: 0 24px 80px rgba(25, 31, 40, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+summary {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  padding: 56px 24px;
+}
+
+.prototype {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+}
+
+.app-header {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  max-width: 880px;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.06;
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
+p {
+  line-height: 1.65;
+}
+
+.step-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.step.is-active {
+  border-color: rgba(0, 100, 255, 0.24);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.step-number {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 999px;
+  background: #edf1f7;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.step.is-active .step-number {
+  background: var(--primary);
+  color: white;
+}
+
+.panel,
+.recommendation-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  padding: 36px;
+}
+
+.result-panel {
+  display: grid;
+  gap: 16px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.recommendation-card {
+  padding: 40px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-strong) 100%);
+}
+
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.section-heading p,
+.result-copy,
+.reason,
+.alternative p {
+  color: var(--muted);
+}
+
+.summary-grid,
+.attendee-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 28px;
+}
+
+.summary-item,
+.attendee-card,
+.share-box,
+.alternative {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.summary-item {
+  padding: 18px;
+}
+
+.summary-item span,
+.condition-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.summary-item strong {
+  font-size: 20px;
+}
+
+.attendee-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 28px;
+}
+
+.attendee-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.attendee-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.role,
+.evidence {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.role.required,
+.evidence.good {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.role.optional,
+.evidence.neutral {
+  background: #eef1f5;
+  color: #4e5968;
+}
+
+.evidence.warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.condition-line {
+  display: grid;
+  gap: 4px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.condition-label.blocked {
+  color: var(--danger);
+}
+
+.condition-label.avoid {
+  color: var(--warning);
+}
+
+.recommendation-card h2 {
+  margin-bottom: 4px;
+  font-size: clamp(44px, 8vw, 84px);
+  line-height: 1;
+}
+
+.result-copy {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.evidence-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.reason {
+  max-width: 700px;
+  margin-bottom: 0;
+  font-size: 17px;
+}
+
+.alternative {
+  overflow: hidden;
+}
+
+.alternative summary {
+  min-height: 52px;
+  padding: 16px 18px;
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.alternative-body {
+  border-top: 1px solid var(--border);
+  padding: 18px;
+}
+
+.alternative-body p {
+  margin-bottom: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-button,
+.secondary-button,
+.text-button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 18px;
+  font-weight: 800;
+}
+
+.primary-button {
+  background: var(--primary);
+  color: white;
+}
+
+.primary-button:hover {
+  background: var(--primary-pressed);
+}
+
+.secondary-button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.text-button {
+  margin-left: 8px;
+  background: transparent;
+  color: var(--muted);
+}
+
+.share-box {
+  margin-bottom: 18px;
+  padding: 22px;
+  background: var(--surface-strong);
+}
+
+.share-box p {
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 28px 16px;
+  }
+
+  .step-nav,
+  .summary-grid,
+  .attendee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel,
+  .recommendation-card {
+    padding: 24px;
+  }
+
+  .step {
+    min-height: 44px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .text-button {
+    width: 100%;
+  }
+
+  .text-button {
+    margin-left: 0;
+  }
+}
