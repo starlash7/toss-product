@@ -1,11 +1,12 @@
 import type { Attendee, TimeSlot } from "./scheduler";
 
 export const slots: TimeSlot[] = [
-  { id: "mon-10", label: "월요일 오전 10:00" },
-  { id: "tue-13", label: "화요일 오후 1:00" },
-  { id: "tue-15", label: "화요일 오후 3:00" },
-  { id: "wed-10", label: "수요일 오전 10:00" },
-  { id: "thu-16", label: "목요일 오후 4:00" }
+  { id: "mon-10", label: "월요일 오전 10:00", day: "월", date: "7/6", time: "10:00" },
+  { id: "tue-13", label: "화요일 오후 1:00", day: "화", date: "7/7", time: "13:00" },
+  { id: "tue-15", label: "화요일 오후 3:00", day: "화", date: "7/7", time: "15:00" },
+  { id: "wed-10", label: "수요일 오전 10:00", day: "수", date: "7/8", time: "10:00" },
+  { id: "wed-15", label: "수요일 오후 3:00", day: "수", date: "7/8", time: "15:00" },
+  { id: "thu-16", label: "목요일 오후 4:00", day: "목", date: "7/9", time: "16:00" }
 ];
 
 export const attendees: Attendee[] = [
@@ -37,12 +38,12 @@ export const attendees: Attendee[] = [
     name: "도윤",
     role: "optional",
     unavailable: ["tue-15"],
-    avoid: ["wed-10"]
+    avoid: ["wed-10", "wed-15"]
   },
   {
     name: "하은",
     role: "optional",
-    unavailable: ["wed-10"],
+    unavailable: ["wed-10", "wed-15"],
     avoid: ["tue-15"]
   }
 ];

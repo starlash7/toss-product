@@ -3,6 +3,9 @@ export type AttendanceRole = "required" | "optional";
 export type TimeSlot = {
   id: string;
   label: string;
+  day?: string;
+  date?: string;
+  time?: string;
 };
 
 export type Attendee = {
